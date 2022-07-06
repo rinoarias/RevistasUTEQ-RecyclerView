@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtRevista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre de Revista"
+        android:padding="5dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/txtEdiciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ediciones: "
+        android:padding="5dp"
+        android:textSize="18dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/infoVolumen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="7dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/imgVolumen"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                />
+
+            <TextView
+                android:id="@+id/txtVolumenDescription"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Vol. X Num. Y: Journal MesI-MesF Anio"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtDoi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:text="Doi: "
+                />
+
+            <TextView
+                android:id="@+id/txtFechaPublicado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:text="Publicado: "
+                />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
