@@ -1,7 +1,6 @@
 package Adapters
 
 import Clases.Journal
-import Clases.Volume
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -9,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.rinoarias.recyclerviewcardviewitems.RevistasActivity
 import com.rinoarias.recyclerviewcardviewitems.VolumesActivity
 import com.rinoarias.recyclerviewcardviewitems.databinding.ItemRevistaBinding
 

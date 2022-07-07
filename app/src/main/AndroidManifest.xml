@@ -16,6 +16,9 @@
         android:theme="@style/Theme.RecyclerViewCardViewItems"
         tools:targetApi="31">
         <activity
+            android:name=".ArticulosActivity"
+            android:exported="false" />
+        <activity
             android:name=".VolumesActivity"
             android:exported="false" />
         <activity

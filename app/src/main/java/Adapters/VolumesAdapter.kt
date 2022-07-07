@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.rinoarias.recyclerviewcardviewitems.RevistasActivity
+import com.rinoarias.recyclerviewcardviewitems.ArticulosActivity
 import com.rinoarias.recyclerviewcardviewitems.VolumesActivity
 import com.rinoarias.recyclerviewcardviewitems.databinding.ItemVolumeBinding
 
@@ -50,7 +50,7 @@ class VolumesAdapter : RecyclerView.Adapter<VolumesAdapter.ViewHolder>() {
                 Toast.LENGTH_SHORT).show()
 
             //agregar funcionalidad de llamar nueva actividad con volumenes de revista
-            val act = Intent(context.applicationContext, VolumesActivity::class.java)
+            val act = Intent(context.applicationContext, ArticulosActivity::class.java)
             act.putExtra("volumen", volumesList[position])
             act.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             context.getApplicationContext().startActivity(act)

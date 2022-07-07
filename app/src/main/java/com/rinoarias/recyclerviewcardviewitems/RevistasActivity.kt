@@ -2,8 +2,8 @@ package com.rinoarias.recyclerviewcardviewitems
 
 import Adapters.JournalsAdapter
 import Clases.Journal
-import Clases.Volume
 import Utils.Endpoint
+import Utils.LocaleLanguage
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -12,11 +12,10 @@ import com.android.volley.Request
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import com.rinoarias.recyclerviewcardviewitems.databinding.ActivityRevistasBinding
-import java.lang.Exception
 
 class RevistasActivity : AppCompatActivity() {
 
-   lateinit var binding: ActivityRevistasBinding
+    lateinit var binding: ActivityRevistasBinding
     private var adapter: JournalsAdapter = JournalsAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,11 +26,16 @@ class RevistasActivity : AppCompatActivity() {
         var lstRevistas = ArrayList<Journal>()
 
         val cola = Volley.newRequestQueue(this)
+        val intent = intent.extras
+        val idiomaSeleccionado = intent?.getString("localeLenguage").toString()
+        var url = Endpoint.JOURNALS.path
+        if(idiomaSeleccionado != LocaleLanguage.SPANISH.language) {
+            url = "$url&locale=$idiomaSeleccionado"
+        }
 
-        val solicitud = JsonArrayRequest(Request.Method.GET, Endpoint.JOURNALS.path, null,
+        val solicitud = JsonArrayRequest(Request.Method.GET, url, null,
             { response ->
                 try {
-
                     for (i in 0 until response.length()){
                         var item = response.getJSONObject(i)
                         lstRevistas.add(Journal(item))

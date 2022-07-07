@@ -17,19 +17,17 @@
         android:textStyle="bold"
         />
     <TextView
-        android:id="@+id/txtEdiciones"
+        android:id="@+id/txtCategorias"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ediciones: "
+        android:text="Categorias: "
         android:padding="5dp"
         android:textSize="18dp"
         />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvVolumenes"
+        android:id="@+id/rvArticulos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        />
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

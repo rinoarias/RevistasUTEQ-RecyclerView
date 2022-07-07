@@ -5,24 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/txtRevista"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nombre de Revista"
-        android:padding="5dp"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        />
-    <TextView
-        android:id="@+id/txtEdiciones"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ediciones: "
-        android:padding="5dp"
-        android:textSize="18dp"
-        />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/infoVolumen"
         android:layout_width="match_parent"
@@ -42,7 +24,7 @@
             <ImageView
                 android:id="@+id/imgVolumen"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="125dp"
                 app:srcCompat="@android:drawable/btn_star_big_on"
                 />
 
